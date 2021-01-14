@@ -5,6 +5,42 @@
 document.getElementById("btnJoin").addEventListener("click", Join);
 document.getElementById("btnSort").addEventListener("click", SortAscending);
 document.getElementById("btnSortDesc").addEventListener("click", SortDescending);
+document.getElementById("btnSwitch").addEventListener("click", DOWSwitch);
+
+
+function DOWSwitch(){
+    let day;
+    // let DaysOfWeek = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+    // document.getElementById("outputCard7").innerText = DaysOfWeek[new Date().getDay()]
+            
+    switch (new Date().getDay()) {
+      case 0:
+        day = "Sunday";
+        break;
+      case 1:
+        day = "Monday";
+        break;
+      case 2:
+        day = "Tuesday";
+        break;
+      case 3:
+        day = "Wednesday";
+        break;
+      case 4:
+        day = "Thursday";
+        break;
+      case 5:
+        day = "Friday";
+        break;
+      case 6:
+        day = "Saturday";
+      default:
+        day = "Unknown";
+    }
+    
+    document.getElementById("outputCard7").innerText = `Today is ${day}`;      
+}
+
 
 function SortAscending(){
     let array = [40, 100, 1, 5, 25, 10];
